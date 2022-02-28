@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
+    [SerializeField] Text coinsCollectedText;
+
     private Text scoreText;
 
     public static int coinCount;
@@ -17,5 +17,6 @@ public class Score : MonoBehaviour
     private void Update()
     {
         scoreText.text = "Coins: " + coinCount;
+        coinsCollectedText.text = "Coins collected: " + coinCount;
     }
 }
